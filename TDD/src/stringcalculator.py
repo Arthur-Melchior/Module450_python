@@ -31,3 +31,16 @@ class StringCalculator:
             if number <= 1000:
                 num *= number
         return num
+
+    def diviser(self: str):
+        parts = self.split(';')
+
+        num = int(parts[0])
+        for part in parts[1:]:
+            try:
+                number = int(part)
+            except ValueError:
+                number = 1
+            if number <= 1000:
+                num /= number
+        return num
