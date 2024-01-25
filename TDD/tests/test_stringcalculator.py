@@ -60,3 +60,18 @@ def test_divide_multiple_numbers(my_param_divide, my_result_divide):
     resultat = StringCalculator.divide(my_param_divide)
     # assert
     assert resultat == my_result_divide
+
+
+@pytest.mark.parametrize("mon_param_soustraire, mon_resultat_soustraire", [
+    ("15;5", 10),
+    ("18;5", 13),
+    ("21;5", 16),
+    ("24;5", 19),
+    ("27;5", 22),
+    ("30;5", 25),
+])
+def test_soustraire_plusieurs_nombres(mon_param_soustraire, mon_resultat_soustraire):
+    # act
+    resultat = StringCalculator.soustraire(mon_param_soustraire)
+    # assert
+    assert resultat == mon_resultat_soustraire
