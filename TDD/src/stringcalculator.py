@@ -45,7 +45,7 @@ class StringCalculator:
                 num /= number
         return num
 
-    def soustraire(self: str):
+    def subtract(self: str):
         parts = self.split(';')
 
         num = int(parts[0])

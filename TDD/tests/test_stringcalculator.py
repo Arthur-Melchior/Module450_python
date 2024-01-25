@@ -62,16 +62,16 @@ def test_divide_multiple_numbers(my_param_divide, my_result_divide):
     assert resultat == my_result_divide
 
 
-@pytest.mark.parametrize("mon_param_soustraire, mon_resultat_soustraire", [
-    ("15;5", 10),
-    ("18;5", 13),
-    ("21;5", 16),
-    ("24;5", 19),
-    ("27;5", 22),
-    ("30;5", 25),
+@pytest.mark.parametrize("my_param_subtract, my_result_subtract", [
+    ("15;5", 10),  # test case
+    ("18;5", 13),  # test case 2
+    ("21;5", 16),  # test case 3
+    ("24;5", 19),  # test case 4
+    ("27;5", 22),  # test case 5
+    ("30;5", 25),  # test case 6
 ])
-def test_soustraire_plusieurs_nombres(mon_param_soustraire, mon_resultat_soustraire):
+def test_subtract_multiple_numbers(my_param_subtract, my_result_subtract):
     # act
-    resultat = StringCalculator.soustraire(mon_param_soustraire)
+    resultat = StringCalculator.subtract(my_param_subtract)
     # assert
-    assert resultat == mon_resultat_soustraire
+    assert resultat == my_result_subtract
