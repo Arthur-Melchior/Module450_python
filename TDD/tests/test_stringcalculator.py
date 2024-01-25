@@ -32,16 +32,16 @@ def test_add_plusieurs_nombres(mon_param, mon_resultat):
     assert somme == mon_resultat
 
 
-@pytest.mark.parametrize("mon_param_mult, mon_resultat_mult", [
-    ("3;5", 15),
-    ("3;6", 18),
-    ("3;7", 21),
-    ("3;8", 24),
-    ("3;9", 27),
-    ("3;10", 30),
+@pytest.mark.parametrize("my_param_mult, my_result_mult", [
+    ("3;5", 15),  # test case
+    ("3;6", 18),  # test case 2
+    ("3;7", 21),  # test case 3
+    ("3;8", 24),  # test case 4
+    ("3;9", 27),  # test case 5
+    ("3;10", 30),  # test case 6
 ])
-def test_multiplier_plusieurs_nombres(mon_param_mult, mon_resultat_mult):
+def test_multiply_multiple_number(my_param_mult, my_result_mult):
     # act
-    resultat = StringCalculator.multiply(mon_param_mult)
+    result = StringCalculator.multiply(my_param_mult)
     # assert
-    assert resultat == mon_resultat_mult
+    assert result == my_result_mult
