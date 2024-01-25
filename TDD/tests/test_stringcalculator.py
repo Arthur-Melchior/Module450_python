@@ -47,16 +47,16 @@ def test_multiply_multiple_number(my_param_mult, my_result_mult):
     assert result == my_result_mult
 
 
-@pytest.mark.parametrize("mon_param_diviser, mon_resultat_diviser", [
-    ("15;3", 5),
-    ("18;3", 6),
-    ("21;3", 7),
-    ("24;3", 8),
-    ("27;3", 9),
-    ("30;3", 10),
+@pytest.mark.parametrize("my_param_divide, my_result_divide", [
+    ("15;3", 5),  # test case
+    ("18;3", 6),  # test case 2
+    ("21;3", 7),  # test case 3
+    ("24;3", 8),  # test case 4
+    ("27;3", 9),  # test case 5
+    ("30;3", 10),  # test case 6
 ])
-def test_diviser_plusieurs_nombres(mon_param_diviser, mon_resultat_diviser):
+def test_divide_multiple_numbers(my_param_divide, my_result_divide):
     # act
-    resultat = StringCalculator.diviser(mon_param_diviser)
+    resultat = StringCalculator.divide(my_param_divide)
     # assert
-    assert resultat == mon_resultat_diviser
+    assert resultat == my_result_divide

@@ -32,7 +32,7 @@ class StringCalculator:
                 num *= number
         return num
 
-    def diviser(self: str):
+    def divide(self: str):
         parts = self.split(';')
 
         num = int(parts[0])
