@@ -45,3 +45,18 @@ def test_multiply_multiple_number(my_param_mult, my_result_mult):
     result = StringCalculator.multiply(my_param_mult)
     # assert
     assert result == my_result_mult
+
+
+@pytest.mark.parametrize("mon_param_diviser, mon_resultat_diviser", [
+    ("15;3", 5),
+    ("18;3", 6),
+    ("21;3", 7),
+    ("24;3", 8),
+    ("27;3", 9),
+    ("30;3", 10),
+])
+def test_diviser_plusieurs_nombres(mon_param_diviser, mon_resultat_diviser):
+    # act
+    resultat = StringCalculator.diviser(mon_param_diviser)
+    # assert
+    assert resultat == mon_resultat_diviser
