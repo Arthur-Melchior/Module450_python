@@ -27,7 +27,7 @@ class StringCalculator:
             try:
                 number = int(part)
             except ValueError:
-                number = 1
+                return 'Invalid Input'
             if number <= 1000:
                 num *= number
         return num
