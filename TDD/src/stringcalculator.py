@@ -49,14 +49,10 @@ class StringCalculator:
         parts = self.split(';')
         try:
             num = int(parts[0])
-            test = int(parts[1])
+            for part in parts[1:]:
+                number = int(part)
+                if number <= 1000:
+                    num -= number
         except ValueError:
             return 'Invalid Input'
-        for part in parts[1:]:
-            try:
-                number = int(part)
-            except ValueError:
-                number = 1
-            if number <= 1000:
-                num -= number
         return num
