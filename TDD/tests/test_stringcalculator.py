@@ -75,3 +75,14 @@ def test_subtract_multiple_numbers(my_param_subtract, my_result_subtract):
     resultat = StringCalculator.subtract(my_param_subtract)
     # assert
     assert resultat == my_result_subtract
+
+
+@pytest.mark.parametrize("my_param_subtract2, my_result_subtract2", [
+    ("a;5", 10),  # test case
+    ("18;bonjour", 13),  # test case 2
+])
+def test_subtract_a_letter_from_a_number(my_param_subtract2, my_result_subtract2):
+    #act
+    result = StringCalculator.subtract(my_param_subtract2)
+    #assert
+    assert result == my_result_subtract2
