@@ -47,6 +47,17 @@ def test_multiply_multiple_number(my_param_mult, my_result_mult):
     assert result == my_result_mult
 
 
+@pytest.mark.parametrize("my_param_mult2, my_result_mult2", [
+    ("a;5", 'Invalid Input'),  # test case
+    ("18;bonjour", 'Invalid Input'),  # test case 2
+])
+def test_multiply_a_letter_from_a_number(my_param_mult2, my_result_mult2):
+    # act
+    result = StringCalculator.multiply(my_param_mult2)
+    # assert
+    assert result == my_result_mult2
+
+
 @pytest.mark.parametrize("my_param_divide, my_result_divide", [
     ("15;3", 5),  # test case
     ("18;3", 6),  # test case 2
