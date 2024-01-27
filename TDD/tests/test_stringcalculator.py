@@ -62,6 +62,17 @@ def test_divide_multiple_numbers(my_param_divide, my_result_divide):
     assert resultat == my_result_divide
 
 
+@pytest.mark.parametrize("my_param_divide2, my_result_divide2", [
+    ("a;5", 'Invalid Input'),  # test case
+    ("18;bonjour", 'Invalid Input'),  # test case 2
+])
+def test_divide_a_letter_from_a_number(my_param_divide2, my_result_divide2):
+    # act
+    result = StringCalculator.divide(my_param_divide2)
+    # assert
+    assert result == my_result_divide2
+
+
 @pytest.mark.parametrize("my_param_subtract, my_result_subtract", [
     ("15;5", 10),  # test case
     ("18;5", 13),  # test case 2
@@ -82,7 +93,7 @@ def test_subtract_multiple_numbers(my_param_subtract, my_result_subtract):
     ("18;bonjour", 'Invalid Input'),  # test case 2
 ])
 def test_subtract_a_letter_from_a_number(my_param_subtract2, my_result_subtract2):
-    #act
+    # act
     result = StringCalculator.subtract(my_param_subtract2)
-    #assert
+    # assert
     assert result == my_result_subtract2
