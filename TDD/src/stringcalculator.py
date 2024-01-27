@@ -34,8 +34,11 @@ class StringCalculator:
 
     def divide(self: str):
         parts = self.split(';')
-
-        num = int(parts[0])
+        try:
+            num = int(parts[0])
+            test = int(parts[1])
+        except ValueError:
+            return 'Invalid Input'
         for part in parts[1:]:
             try:
                 number = int(part)
