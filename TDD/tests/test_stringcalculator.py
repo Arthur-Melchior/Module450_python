@@ -30,3 +30,48 @@ def test_add_plusieurs_nombres(mon_param, mon_resultat):
     somme = StringCalculator.add(mon_param)
     # assert
     assert somme == mon_resultat
+
+
+@pytest.mark.parametrize("my_param_mult, my_result_mult", [
+    ("3;5", 15),  # test case
+    ("3;6", 18),  # test case 2
+    ("3;7", 21),  # test case 3
+    ("3;8", 24),  # test case 4
+    ("3;9", 27),  # test case 5
+    ("3;10", 30),  # test case 6
+])
+def test_multiply_multiple_number(my_param_mult, my_result_mult):
+    # act
+    result = StringCalculator.multiply(my_param_mult)
+    # assert
+    assert result == my_result_mult
+
+
+@pytest.mark.parametrize("my_param_divide, my_result_divide", [
+    ("15;3", 5),  # test case
+    ("18;3", 6),  # test case 2
+    ("21;3", 7),  # test case 3
+    ("24;3", 8),  # test case 4
+    ("27;3", 9),  # test case 5
+    ("30;3", 10),  # test case 6
+])
+def test_divide_multiple_numbers(my_param_divide, my_result_divide):
+    # act
+    resultat = StringCalculator.divide(my_param_divide)
+    # assert
+    assert resultat == my_result_divide
+
+
+@pytest.mark.parametrize("my_param_subtract, my_result_subtract", [
+    ("15;5", 10),  # test case
+    ("18;5", 13),  # test case 2
+    ("21;5", 16),  # test case 3
+    ("24;5", 19),  # test case 4
+    ("27;5", 22),  # test case 5
+    ("30;5", 25),  # test case 6
+])
+def test_subtract_multiple_numbers(my_param_subtract, my_result_subtract):
+    # act
+    resultat = StringCalculator.subtract(my_param_subtract)
+    # assert
+    assert resultat == my_result_subtract
