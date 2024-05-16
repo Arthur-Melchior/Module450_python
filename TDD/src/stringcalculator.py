@@ -27,33 +27,31 @@ class StringCalculator:
             try:
                 number = int(part)
             except ValueError:
-                number = 1
+                return 'Invalid Input'
             if number <= 1000:
                 num *= number
         return num
 
     def divide(self: str):
         parts = self.split(';')
-
-        num = int(parts[0])
-        for part in parts[1:]:
-            try:
+        try:
+            num = int(parts[0])
+            for part in parts[1:]:
                 number = int(part)
-            except ValueError:
-                number = 1
-            if number <= 1000:
-                num /= number
+                if number <= 1000:
+                    num /= number
+        except ValueError:
+            return 'Invalid Input'
         return num
 
     def subtract(self: str):
         parts = self.split(';')
-
-        num = int(parts[0])
-        for part in parts[1:]:
-            try:
+        try:
+            num = int(parts[0])
+            for part in parts[1:]:
                 number = int(part)
-            except ValueError:
-                number = 1
-            if number <= 1000:
-                num -= number
+                if number <= 1000:
+                    num -= number
+        except ValueError:
+            return 'Invalid Input'
         return num
