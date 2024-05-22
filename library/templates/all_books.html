@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous les livres enregistrés</title>
+</head>
+<body>
+    <h1>Liste de tous les livres</h1>
+
+    <form action="{% url 'all_books' %}" method="GET">
+        <label for="sort_by">Trier par :</label>
+        <select name="sort_by" id="sort_by">
+            <option value="time">Time</option>
+            <option value="abc">Abc</option>
+        </select>
+        <button type="submit">Trier</button>
+    </form>
+
+    <ul>
+        {% for book in books %}
+            <li>{{ book.author }} - {{ book.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
