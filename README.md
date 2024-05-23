@@ -35,4 +35,7 @@ Web app simple écrite avec Django pour le module 450.
    ```
    pytest -v
    ```
+## Badges
+![pytest](https://github.com/Arthur-Melchior/Module450_python/actions/workflows/django.yml/badge.svg)
+![Qodana](https://github.com/Arthur-Melchior/Module450_python/actions/workflows/code_quality.yml/badge.svg)
 
