@@ -1,0 +1,34 @@
+[
+    {
+        "model": "library.book",
+        "pk": 1,
+        "fields": {
+            "title": "Book 1",
+            "author": "Author 1"
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 2,
+        "fields": {
+            "title": "Book 2",
+            "author": "Author 2"
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 3,
+        "fields": {
+            "title": "Book 3",
+            "author": "Author 3"
+        }
+    },
+    {
+        "model": "library.book",
+        "pk": 4,
+        "fields": {
+            "title": "Book 4",
+            "author": "Author 4"
+        }
+    }
+]
